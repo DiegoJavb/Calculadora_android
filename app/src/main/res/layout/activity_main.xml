@@ -4,17 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#223587"
     tools:context=".MainActivity">
 
+
     <Button
-        android:id="@+id/button7"
-        android:layout_width="60dp"
+        android:id="@+id/buttonSen"
+        android:layout_width="80dp"
         android:layout_height="50dp"
-        android:text="@string/_7"
+        android:text="@string/sen"
         android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toStartOf="@+id/divider6"
+        app:layout_constraintStart_toEndOf="@+id/divider12"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="10dp"
+        android:layout_height="350dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toEndOf="@+id/divider6" />
 
     <Button
         android:id="@+id/button4"
@@ -23,18 +37,30 @@
         android:text="@string/_4"
         android:textColor="#455A64"
         app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider12"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="60dp"
+        android:id="@+id/buttonPotencia"
+        android:layout_width="80dp"
         android:layout_height="50dp"
-        android:text="@string/_1"
+        android:text="@string/x_2"
         android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/button0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/divider10"
+        app:layout_constraintEnd_toStartOf="@+id/divider9"
+        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintStart_toEndOf="@+id/divider10"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="10dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="140dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button0"
@@ -43,8 +69,29 @@
         android:text="@string/_0"
         android:textColor="#455A64"
         app:layout_constraintBottom_toTopOf="@+id/divider4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider12"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/_7"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/divider12"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="10dp"
+        android:layout_height="600dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintVertical_bias="0.533" />
 
     <Button
         android:id="@+id/button8"
@@ -53,36 +100,6 @@
         android:text="@string/_8"
         android:textColor="#455A64"
         app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintStart_toEndOf="@+id/divider3"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="@string/_5"
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/divider3"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="@string/_2"
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPunto"
-        app:layout_constraintStart_toEndOf="@+id/divider3"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/buttonPunto"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="."
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/divider4"
         app:layout_constraintStart_toEndOf="@+id/divider3"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
@@ -97,92 +114,13 @@
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="@string/_6"
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/divider5"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="@string/_3"
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNone"
-        app:layout_constraintStart_toEndOf="@+id/divider5"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/buttonNone"
-        android:layout_width="142dp"
-        android:layout_height="52dp"
-        android:text=""
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/divider4"
-        app:layout_constraintStart_toEndOf="@+id/divider5"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/buttonClear"
-        android:layout_width="150dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/teal_200"
-        android:text="@string/ac"
-        android:textColor="#F44336"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMas"
-        app:layout_constraintEnd_toStartOf="@+id/divider9"
-        app:layout_constraintStart_toEndOf="@+id/divider7"
-        app:rippleColor="#4C2727"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/buttonPor"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="@string/x"
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNone"
-        app:layout_constraintEnd_toStartOf="@+id/divider8"
-        app:layout_constraintStart_toEndOf="@+id/divider7"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
         android:id="@+id/buttonMas"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:text="+"
         android:textColor="#455A64"
         app:layout_constraintBottom_toTopOf="@+id/buttonPor"
-        app:layout_constraintEnd_toStartOf="@+id/divider8"
         app:layout_constraintStart_toEndOf="@+id/divider7"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-
-    <Button
-        android:id="@+id/buttonIgual"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="="
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonNone"
-        app:layout_constraintEnd_toStartOf="@+id/divider9"
-        app:layout_constraintStart_toEndOf="@+id/divider8"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/buttonMenos"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:text="-"
-        android:textColor="#455A64"
-        app:layout_constraintBottom_toTopOf="@+id/buttonIgual"
-        app:layout_constraintEnd_toStartOf="@+id/divider9"
-        app:layout_constraintStart_toEndOf="@+id/divider8"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <Button
@@ -197,27 +135,101 @@
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <View
+        android:id="@+id/divider7"
+        android:layout_width="12dp"
+        android:layout_height="510dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNone"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="10dp"
+        android:layout_height="150dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonNone"
+        app:layout_constraintStart_toEndOf="@+id/buttonMas"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/_5"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/divider3"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/_6"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/divider5"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonIgual"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="="
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonNone"
+        app:layout_constraintEnd_toStartOf="@+id/divider9"
+        app:layout_constraintStart_toEndOf="@+id/divider8"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <View
         android:id="@+id/divider3"
         android:layout_width="10dp"
         android:layout_height="600dp"
-        android:background="?android:attr/listDivider"
 
+        android:background="?android:attr/listDivider"
         android:outlineAmbientShadowColor="@color/white"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintVertical_bias="0.533" />
 
+    <Button
+        android:id="@+id/buttonPor"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/x"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNone"
+        app:layout_constraintStart_toEndOf="@+id/divider7"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
-    <View
-        android:id="@+id/divider4"
-        android:layout_width="409dp"
-        android:layout_height="30dp"
-        android:background="?android:attr/listDivider"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/buttonMenos"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIgual"
+        app:layout_constraintEnd_toStartOf="@+id/divider9"
+        app:layout_constraintStart_toEndOf="@+id/divider8"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonPunto"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="."
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintStart_toEndOf="@+id/divider3"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <View
         android:id="@+id/divider5"
@@ -227,52 +239,130 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintVertical_bias="0.533" />
 
-    <View
-        android:id="@+id/divider7"
-        android:layout_width="12dp"
-        android:layout_height="510dp"
-        android:background="?android:attr/listDivider"
-        android:visibility="invisible"
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/ac"
+        android:textColor="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMas"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPara"
+        app:layout_constraintStart_toEndOf="@+id/divider7"
+        app:rippleColor="#4C2727"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/_2"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPunto"
+        app:layout_constraintStart_toEndOf="@+id/divider3"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonNone"
+        android:layout_width="120dp"
+        android:layout_height="52dp"
+        android:text=""
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintStart_toEndOf="@+id/divider6"
+        app:layout_constraintTop_toTopOf="@+id/buttonPunto"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/_3"
+        android:textColor="#455A64"
         app:layout_constraintBottom_toTopOf="@+id/buttonNone"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintStart_toEndOf="@+id/divider5"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <View
-        android:id="@+id/divider8"
-        android:layout_width="10dp"
-        android:layout_height="150dp"
+        android:id="@+id/divider"
+        android:layout_width="410dp"
+        android:layout_height="20dp"
         android:background="?android:attr/listDivider"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonNone"
-        app:layout_constraintStart_toEndOf="@+id/buttonNone"
-        app:layout_constraintTop_toBottomOf="@+id/buttonClear"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/_1"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintStart_toEndOf="@+id/divider12"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <View
-        android:id="@+id/divider9"
-        android:layout_width="10dp"
-        android:layout_height="600dp"
+        android:id="@+id/divider4"
+        android:layout_width="409dp"
+        android:layout_height="30dp"
         android:background="?android:attr/listDivider"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCos"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="@string/cos"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toStartOf="@+id/divider10"
+        app:layout_constraintStart_toEndOf="@+id/divider6"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="350dp"
         android:layout_height="96dp"
+        android:background="#fff"
         android:shadowColor="#151313"
         android:shadowDx="20"
         android:shadowDy="20"
         android:shadowRadius="100"
         android:text="0"
         android:textColorLink="#FFFFFF"
+        android:textSize="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider11" />
+
+    <View
+        android:id="@+id/divider11"
+        android:layout_width="409dp"
+        android:layout_height="20dp"
+        android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider12"
+        android:layout_width="10dp"
+        android:layout_height="500dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

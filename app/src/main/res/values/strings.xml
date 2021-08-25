@@ -14,4 +14,7 @@
     <string name="por">por</string>
     <string name="mas">mas</string>
     <string name="x">x</string>
+    <string name="sen">sen</string>
+    <string name="cos">cos</string>
+    <string name="x_2">X^2</string>
 </resources>
